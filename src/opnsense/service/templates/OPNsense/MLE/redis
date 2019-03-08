@@ -1,0 +1,3 @@
+{% if helpers.exists('OPNsense.MLE') and OPNsense.MLE.enabled|default('0') == '1' %}
+redis_enable="YES"
+{% endif %}
