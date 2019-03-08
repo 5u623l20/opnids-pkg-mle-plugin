@@ -1,0 +1,6 @@
+{% if helpers.exists('OPNsense.MLE') %}
+{% if OPNsense.MLE.enabled|default('0') == '1' %}
+# REQUIRE: redis
+dragonflymle_enable="YES"
+{% endif %}
+{% endif %}
