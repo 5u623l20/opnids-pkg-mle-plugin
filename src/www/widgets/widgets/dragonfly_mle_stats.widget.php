@@ -40,6 +40,7 @@ require_once "guiconfig.inc";
         <div id="mle_stats_chart">
           <svg style="height:250px;"></svg>
         </div>
+        <div id="mle_stats_empty"></div>
       </td>
     </tr>
   </tbody>
@@ -72,7 +73,13 @@ function mle_widget_update(sender, data, max_measures) {
     try {
         data = JSON.parse(window.atob(data))
     } catch(e) {
-        console.error(e);
+        data = [];
+    }
+
+    if (!data.length) {
+        $('#mle_stats_empty').html('<center><span>If no data is showing, make sure MLE has been <a href="/ui/mle">enabled</a> and the service has started.</span></center>');
+    } else {
+        $('#mle_stats_empty').empty();
     }
 
     if (data) {
