@@ -2,6 +2,5 @@
   <MLE order="40" VisibleName="MLE" cssClass="fa cfai-ids-brain fa-fw">
     <Administration url="/ui/mle" cssClass="fa fa-cog" />
     <Configuration url="/ui/mle/config" cssClass="fa fa-cog" />
-    <Log VisibleName="Log File" url="/diag_logs_dragonflymle.php" cssClass="fa fa-eye"/>
   </MLE>
 </menu>
